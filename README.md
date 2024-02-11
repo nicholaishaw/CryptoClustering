@@ -5,9 +5,9 @@ In this challenge, I used my knowledge of Python and unsupervised learning to pr
 ## Preparing the Data
 * I used the StandardScaler module from the scikit-learn library to normalize the data from the raw CSV file.
 * I created a DataFrame with the scaled data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
-    * The first five rows of the scaled DataFrame is as follows:
+    * The first ten rows of the scaled DataFrame is as follows:
  
-![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/78b5b2f2-25b0-446b-ae6b-23c057c9e077)
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/52d8da5d-001a-4eef-bb45-55dd81606a66)
 
 ## Finding the Best Value for k Using the Original Scaled DataFrame
 I Used the elbow method to find the best value for k using the following steps:
