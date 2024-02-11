@@ -7,7 +7,7 @@ In this challenge, I used my knowledge of Python and unsupervised learning to pr
 * I created a DataFrame with the scaled data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
     * The first ten rows of the scaled DataFrame is as follows:
  
-![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/52d8da5d-001a-4eef-bb45-55dd81606a66)
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/28d4fae2-64c8-481f-b325-f3f28a235a7a)
 
 ## Finding the Best Value for k Using the Original Scaled DataFrame
 I Used the elbow method to find the best value for k using the following steps:
