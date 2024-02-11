@@ -25,7 +25,7 @@ I Used the elbow method to find the best value for k using the following steps:
 
 
 
-* I answered the following question in my notebook: What is the best value for k?
+* By examining the elbow chart, the best value for k was 4.
 
 ## Clustering Cryptocurrencies with K-means Using the Original Scaled Data
 Use the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
