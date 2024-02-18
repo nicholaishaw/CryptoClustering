@@ -40,9 +40,9 @@ I used the following steps to cluster the cryptocurrencies for the best value fo
     * Added the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
 
 ## Optimizing Clusters with Principal Component Analysis.
-Performed a PCA and reduce the features to three principal components using the original scaled DataFrame.
+I performed a PCA and reduce the features to three principal components using the original scaled DataFrame.
 
-* Retrieve the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook:
+* Retrieved the explained variance to determine how much information can be attributed to each principal component
     * The total explained variance of the three principal components is 89.5% (the sum of the array of [0.3719856 , 0.34700813, 0.17603793]
 * Created a new DataFrame with the PCA data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
     * The first five rows of the PCA DataFrame should appear as follows:
@@ -79,4 +79,4 @@ Used the following steps to cluster the cryptocurrencies for the best value for 
 * Answer the following question:
 
 ## The impact of using fewer features to cluster the data using K-Means
-There are several impacts of using fewer features to clusters. Firstly, it accelerates the K-Means function, making it more efficient, especially with large datasets. As such, since it is improbable to include every single column of data contributing to variance, the data need to be trimmed to only include the data contributing to most of the variance of the dataset. Secondly, using fewer features may result in less accurate cluster representations of the dataset. This can lead to a somewhat incomplete picture compared to using all available features.
+There are several impacts of using fewer features to clusters. Firstly, it accelerates the K-Means function to make it more efficient—especially with large datasets. As such, since it is improbable to include every single column of data contributing to variance, the data need to be trimmed to only include the data contributing to most of the variance of the dataset. Secondly, using fewer features may result in less accurate cluster representations of the dataset. This can lead to a somewhat incomplete picture compared to using all available features.
