@@ -3,11 +3,21 @@
 In this challenge, I used my knowledge of Python and unsupervised learning to predict if cryptocurrencies are affected by 24-hour or 7-day price changes.
 
 ## Preparing the Data
+* Data were imported from the csv file containing information on the prices of crypto currency and put into a Pandas dataframe.
+    * The raw dataframe is as follows:
+ 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/fb97d976-738c-4b69-9990-19817a19d294)
+
+* Data were graphed to highlight the price change of each bitcoin across various timepoints
+    * Plot is as follows:
+
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/455214b6-53c4-4e72-818e-c5fd51f36455)
+
 * I used the StandardScaler module from the scikit-learn library to normalize the data from the raw CSV file.
 * I created a DataFrame with the scaled data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
     * The first ten rows of the scaled DataFrame is as follows:
  
-![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/28d4fae2-64c8-481f-b325-f3f28a235a7a)
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/66dd83ef-d6c3-4365-a18e-9b8aaee21756)
 
 ## Finding the Best Value for k Using the Original Scaled DataFrame
 I Used the elbow method to find the best value for k using the following steps:
@@ -15,17 +25,21 @@ I Used the elbow method to find the best value for k using the following steps:
 * I created a list with the number of k values from 1 to 11.
 * I created an empty list to store the inertia values.
 * I created a for loop to compute the inertia with each possible value of k.
+    * Sample code is as follows:
+ 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/a45f6ee9-5c16-4d60-bf57-647f48b4f7d6)
+
 * I created a dictionary with the data to plot the elbow curve.
     * Sample code as follows:
 
-
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/9528429f-c30a-4450-a8c6-2b6dfb1b52eb)
 
 * I plotted a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
     * Line chart as follows:
 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/f8627ff6-e1d0-4962-b6f7-ad1823968014)
 
-
-* By examining the elbow chart, the best value for k was 4.
+* After carefully examining the elbow chart, the best value for k was 4—the point where the graph runs almost parallel to the x-axis
 
 ## Clustering Cryptocurrencies with K-means Using the Original Scaled Data
 I used the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
