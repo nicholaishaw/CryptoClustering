@@ -92,16 +92,26 @@ Similar to the original data, I used the elbow method on the PCA data to find th
 * After examining the elbow chart, the best value for k was 4 and it does not differ from the original data.
 
 ## Cluster Cryptocurrencies with K-means Using the PCA Data
-Used the following steps to cluster the cryptocurrencies for the best value for k on the PCA data:
-* Initialized the K-means model with the best value for k.
-* Fit the K-means model using the PCA data.
-* Predicted the clusters to group the cryptocurrencies using the PCA data.
-* Created a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
-* Created a scatter plot using hvPlot as follows:
-* Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
-* Colored the graph points with the labels found using K-means.
-* Added the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
-* Answer the following question:
+I used the following steps to cluster the cryptocurrencies for the best value for k on the PCA data:
+* I initialized the K-means model with the best value for k.
+* I fit the K-means model using the PCA data.
+* I predicted the clusters to group the cryptocurrencies using the PCA data.
+* I created a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
+    * Sample code is as follows:
+ 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/206aaf48-f0f8-4187-a75b-652cbde6cefb)
+  
+* I created a scatter plot using hvPlot as follows:
+    * I set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
+    * I colored the graph points with the labels found using K-means.
+    * I added the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
+    * PCA plot is as follows:
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/cbbff5fb-cef9-4629-9908-926c78d48175)
+
+## Side-by-Side Analysis of the Original Scaled Data and the PCA data
+* In the jupyter notebook, I made a side-by-side comparison of the elbow curves and the scatter plots of the original scaled data vs. the PCA data
+
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/c7999933-3083-4ad4-9900-3f11fb20e214)
 
 ## The impact of using fewer features to cluster the data using K-Means
 There are several impacts of using fewer features to clusters. Firstly, it accelerates the K-Means function to make it more efficient—especially with large datasets. As such, since it is improbable to include every single column of data contributing to variance, the data need to be trimmed to only include the data contributing to most of the variance of the dataset. Secondly, using fewer features may result in less accurate cluster representations of the dataset. This can lead to a somewhat incomplete picture compared to using all available features.
