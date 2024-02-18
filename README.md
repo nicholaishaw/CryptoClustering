@@ -44,39 +44,50 @@ I Used the elbow method to find the best value for k using the following steps:
 ## Clustering Cryptocurrencies with K-means Using the Original Scaled Data
 I used the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
 
-* Initialized the K-means model with the best value for k.
-* Fit the K-means model using the original scaled DataFrame.
-* Predicted the clusters to group the cryptocurrencies using the original scaled DataFrame.
-* Created a copy of the original data and add a new column with the predicted clusters.
-* Created a scatter plot using hvPlot as follows:
+* I initialized the K-means model with the best value for k.
+* I fit the K-means model using the original scaled DataFrame.
+* I predicted the clusters to group the cryptocurrencies using the original scaled DataFrame.
+* I created a copy of the original data and add a new column with the predicted clusters.
+    * Sample code is as follows:
+
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/80fdc872-e200-4a5f-b3fd-9fbc3b1839a9)
+
+* I Created a scatter plot using hvPlot as follows:
     * Set the x-axis as "PC1" and the y-axis as "PC2".
     * Colored the graph points with the labels found using K-means.
     * Added the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/907b02ad-416c-4b44-b3e0-0258c749e3d7)
+
 ## Optimizing Clusters with Principal Component Analysis.
 I performed a PCA and reduce the features to three principal components using the original scaled DataFrame.
 
-* Retrieved the explained variance to determine how much information can be attributed to each principal component
+* I retrieved the explained variance to determine how much information can be attributed to each principal component
     * The total explained variance of the three principal components is 89.5% (the sum of the array of [0.3719856 , 0.34700813, 0.17603793]
+    * Sample code:
+
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/eb32bf4f-0a55-4a37-b3ff-245b47e5832f)
+
 * Created a new DataFrame with the PCA data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
-    * The first five rows of the PCA DataFrame should appear as follows:
+    * The first five rows of the PCA DataFrame appeared as follows:
  
-![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/08a7e784-552b-40fd-9426-6bccd4cc0fca)
 
 ## Finding the Best Value for k Using the PCA Data
-Used the elbow method on the PCA data to find the best value for k using the following steps:
+Similar to the original data, I used the elbow method on the PCA data to find the best value for k using the following steps:
 * Created a list with the number of k-values from 1 to 11.
 * Created an empty list to store the inertia values.
 * Created a for loop to compute the inertia with each possible value of k.
 * Created a dictionary with the data to plot the Elbow curve.
     * Sample code as follows:
 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/e354a5f5-3196-41b0-bf3b-ed9f9d3b9080)
 
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/8c77df15-705a-4dd1-948c-a3738bf05258)
 
 * Ploted a line chart with all the inertia values computed with the different values of k to visually identify the optimal value for k.
     * Line chart as follows:
 
-
+![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/9ef1e70a-42a7-4c1c-b7f3-7187a122d736)
 
 * After examining the elbow chart, the best value for k was 4 and it does not differ from the original data.
 
