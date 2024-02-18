@@ -109,7 +109,7 @@ I used the following steps to cluster the cryptocurrencies for the best value fo
 ![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/cbbff5fb-cef9-4629-9908-926c78d48175)
 
 ## Side-by-Side Analysis of the Original Scaled Data and the PCA data
-* In the jupyter notebook, I made a side-by-side comparison of the elbow curves and the scatter plots of the original scaled data vs. the PCA data
+* In the jupyter notebook, I compared the original scaled data and the PCA data by making a side-by-side comparison of the elbow curves and the scatter plots of the clusters.
 
 ![image](https://github.com/nicholaishaw/CryptoClustering/assets/135463220/c7999933-3083-4ad4-9900-3f11fb20e214)
 
